@@ -1,0 +1,4 @@
+# .gitignore 
+node_modules 
+
+#Require npm install mssql
