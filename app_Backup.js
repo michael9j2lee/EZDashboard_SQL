@@ -19,7 +19,7 @@ sql.on('error', err => {
 app.get("/", function(req, res) {
     sql.connect(DbConnectionString).then(pool => {
         return pool.request()
-            .query('select * from emp;');
+            .query('SELECT *  FROM [SampleData].[dbo].[SampleAggregates]');
     }).then(result => {
         sql.close();
         res.render("data", { model: result.recordset });
